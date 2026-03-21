@@ -172,7 +172,7 @@ export default function Home() {
   async function runManual() {
     setLoading(true); setError(''); setResult(null);
     try {
-      const res = await fetch('http://127.0.0.1:8000/audit/manual', {
+      const res = await fetch('https://web-production-cc839.up.railway.app/audit/manual', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
@@ -188,7 +188,7 @@ export default function Home() {
     setLoading(true); setError(''); setResult(null);
     try {
       const body = subnet.trim() ? { target: subnet.trim() } : {};
-      const res = await fetch('http://127.0.0.1:8000/audit/scan', {
+      const res = await fetch('https://web-production-cc839.up.railway.app/audit/scan', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(body),
