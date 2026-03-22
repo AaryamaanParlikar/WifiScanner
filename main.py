@@ -8,7 +8,8 @@ import socket
 import subprocess
 from concurrent.futures import ThreadPoolExecutor
 
-NMAP = r"C:\Program Files (x86)\Nmap\nmap.exe"
+import os   
+NMAP = os.environ.get("NMAP_PATH", "nmap")
 
 app = FastAPI(title="Wi-Fi Security Auditor API", version="1.0.0")
 
